@@ -1,4 +1,4 @@
-public class Uczen extends Osoba {
+public class Uczen extends Osoba implements Dyzurny{
         //poniwaz uczen ma te same wlasnosci co osoba to bedzie klasa potomna klasy osoba klasa osoba bedzie klasa bazowa
         private int nr_ewidecyjny;
         static int LiczbaObiektow;
@@ -22,5 +22,10 @@ public class Uczen extends Osoba {
                 " imie"+getImie()+ "nazwsiko"+getNazwisko()+
                 " nr_ewidecyjny=" + nr_ewidecyjny +
                 "}" ;
+    }
+
+    @Override
+    public void wykonajDyzur() {
+        System.out.println("Zmazuje tablicę");
     }
 }
