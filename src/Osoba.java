@@ -17,6 +17,8 @@ public class Osoba {
     }
     //metody dostępowe
     //gettery i settery
+
+
     public String getImie() {
         return imie;
     }
@@ -41,7 +43,7 @@ public class Osoba {
             this.imie = imie;
         }
         else{
-            System.out.println("nie możesz mzienić imienia");
+            System.out.println("nie możesz zmienić imienia");
         }
     }
 
@@ -59,5 +61,14 @@ public class Osoba {
 
     public void setWiek(int wiek) {
         this.wiek = wiek;
+    }
+
+    @Override
+    public String toString() {
+        return "Osoba{" +
+                "imie='" + imie + '\'' +
+                ", nazwisko='" + nazwisko + '\'' +
+                ", wiek=" + wiek +
+                '}';
     }
 }
