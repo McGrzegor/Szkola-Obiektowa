@@ -4,41 +4,60 @@ public class Osoba {
     private String imie;
     private String nazwisko;
     private int wiek;
-    //konstruktor to metoda wywołania w momenie tworzneia obiektów
+    //prywatne własności są dostępne tylko w TEJ klasie
 
+    //konstruktor to metoda wywoływana w momencie tworzenia obiektu
 
     public Osoba(String imie, String nazwisko, int wiek) {
         this.imie = imie;
-        //przypisz do własności klasy imie (this wskazuje na ten element)
-        this.nazwisko = nazwisko;
+        //przypisz do własności klasy imie (this wskazuje na ten obiekt
         //imie które jest parametrem tej metody
+        this.nazwisko = nazwisko;
         this.wiek = wiek;
     }
-
+    //metody dostępowe
+    //gettery i settery
     public String getImie() {
         return imie;
+    }
+    public Osoba(String imie, String nazwisko) {
+        this.imie = imie;
+        this.nazwisko = nazwisko;
+        wiek=7; //jeżeli nie ma lokalnie zmiennej wiek to jest podstawowe
+    }
+
+    public Osoba() {
+        imie = "";
+        nazwisko= "";
+        wiek = 0;
+    }
+    public void setImie(String imie) {
+        //wpisywanie hasla z klawiatury
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Podaj haslo do zmiany imienia");
+        String haslo = scanner.next();
+        //jezeli haslo qwe123 to zmien w przeciwnym wypadku komunikat
+        if(haslo.equals("qwe123")) {
+            this.imie = imie;
+        }
+        else{
+            System.out.println("nie możesz mzienić imienia");
+        }
     }
 
     public String getNazwisko() {
         return nazwisko;
     }
 
+    public void setNazwisko(String nazwisko) {
+        this.nazwisko = nazwisko;
+    }
+
     public int getWiek() {
         return wiek;
     }
 
-    //metody dostepowe
-    //gettery i settery
-    public void setImie(String imie) {
-        //wpisywanie hasła z klawaitury
-        Scanner Scanner = new Scanner(System.in);
-        String haslo = Scanner.next();
-
-        if (haslo.equals("qwe123"));
-        //jezeli haslo qwe123
-
-
+    public void setWiek(int wiek) {
+        this.wiek = wiek;
     }
-
 }
-
